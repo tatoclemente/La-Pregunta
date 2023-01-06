@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos un programa de juegos para toda la familia, ¡sumate a La Pregunta!">
+    <link rel="icon" type="icon/ico" href="imagenes/LaPregunta.ico">
+    <meta name="author" content="Fátima Liendo"> 
+    <meta name="image" href="fotos/programa-4.jpg">
+    <title>La pregunta urbana</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/float.css">
+    <link rel="stylesheet" href="urbana.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/a75ab841f4.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="espera">
+        <div class="lds-heart">
+            <div></div>
+        </div>
+        <h1 class="texto">Por favor espere...</h1>
+    </div>
+    <header class="topheader">
+        <nav>
+            <a href="#">
+                <img class="logo" src="imagenes/Navidad.png" alt="logo">
+            </a>
+            <p class="VamosAr">¡Feliz Año Nuevo! 🌠</p>
+            <ul class="enlaces-menu">
+                <li><a href="index.html" class="selected">Principal</a></li>
+                <li><a href="index.html#galeria">Galería de fotos</a></li>
+                <li><a href="recomendaciones.html">Recomendados</a></li>
+                <li><a href="la-pregunta-urbana.html">La Pregunta Urbana</a></li>
+            </ul>
+            <button class="ham" type="button">
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+            </button>
+            <script src="menu.js"></script>
+        </nav>
+    </header>
+
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <p>Creado con <i class="fa-solid fa-heart"></i>por   
+                <a target="_blank" href="https://www.instagram.com/tatoclemente/">Gustavo Clemente</a></p>
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h4>¡Contactanos Aquí!</h4>
+            <ul>
+                <li>
+                    <a href="https://walink.co/11f0be" target="_blank">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UC_JWvX4-fyBZjSk4-5ORZ3A" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/lapreguntalv-101677789000820" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lapreguntalv/" target="_blank">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="floating-btn">
+        ¡Tocá!👈
+    </button>
+    <script>
+        const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
+
+floating_btn.addEventListener('click', () => {
+    social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+    social_panel_container.classList.remove('visible')
+});
+    </script>
+
+    <section>
+        <div class="center-urbana">
+            <img src="imagenes/urbana-logo.png" alt="centrada en css">
+        </div>
+
+    </section>
+
+    <section class="GaleriaDeVideos">
+        <div class="presentacion">
+            <p>Nos encanta hacer preguntas..!!<br>¿Qué mejor que con personas al azar, y en las calles de la ciudad?</p>
+        </div>
+    
+        <div class="grid-container">
+            <!--<h1 class="title-1"> 1917</h1>-->
+            <div class="grid-item"> 
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/n8LBBbT8NGs" title="YouTube video player" class="vid" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        <!--<h1 class="title-2"> Erase una vez en Mexico</h1> -->
+            <div class="grid-item ">
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bkEnm4VTRUs" title="YouTube video player" class="vid" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+
+            <!--<h1 class="title-3"> Bohemian Rapsody</h1>
+            <div class="grid-item">
+            
+            
+            </div>-->
+        </div>    
+        </section>
+
+
+
+    <footer class="pie">
+        <a href="https://www.instagram.com/tatoclemente/"><h3>Creado por Gustavo Clemente</h3></a> 
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="espera.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

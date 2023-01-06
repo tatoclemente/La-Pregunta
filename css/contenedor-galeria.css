@@ -1,0 +1,18 @@
+.contenedor-galeria{
+    display: flex;
+    flex-direction: column;
+    background-color: #8278dc;
+}
+
+.wave{
+    width: 100%;
+    position: relative;
+    top: 2px;
+}
+
+.wave-bottom{
+    width: 100%;
+    top: -2px;
+    transform: scaleY(-1);
+   
+}

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.topheader{
+    box-shadow: 0 4px 5px #acacac;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    
+}
+.VamosAr{
+    color: rgb(126, 17, 136);
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursiva;
+    margin-left: 15px;
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+    background-color: rgb(209, 187, 230);
+}
+
+.ham{
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ham span{
+    display: block;
+    background-color: rgb(126, 17, 136);;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.enlaces-menu{
+    display: flex;
+    padding: 0;
+}
+
+.enlaces-menu li{
+    padding: 0 40px;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.enlaces-menu li a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: rgb(126, 17, 136);
+    font-weight: 600;
+}
+
+.enlaces-menu li:hover{
+    background-color: #8278dc;
+    border-radius: 5px;
+}
+
+.bubble{
+    position: absolute;
+    background: #ffd148;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px 1px #ffd148;
+    animation: animate linear infinite;
+}
+
+i:nth-child(even){
+    background: transparent;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.75;
+    }
+    90%{
+        opacity: 0.75;
+    }
+    100%{
+        transform: translateY(2000%);
+        opacity: 0;
+    }
+}
+
+/*DISPOSITIVOS MOVILES*/
+
+@media (max-width:950px){
+
+    .topheader{
+        box-shadow: 0 4px 5px #acacac;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
+
+
+    .logo{
+      
+        margin-left: 25px;
+        background-color: transparent;
+        
+    }
+    .ham{
+        display: block;
+        position:absolute;
+        top: 50px;
+        right: 25px;
+        transition: 0.2s 0.1s;
+    }
+
+    .ham:hover{
+        transform: rotate(360deg);
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:flex-start;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .VamosAr{
+        color: rgb(126, 17, 136);
+        font-size: 4rem;
+        font-family: 'Dancing Script', cursive;
+        margin-left: 35px;
+    }
+    
+
+    .enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 85vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display:none;
+        opacity: 0;
+    
+        
+    }
+
+    .enlaces-menu li{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+
+    }
+}
+
+@keyframes muestraMenu{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.enlaces-menu.activado{
+    display: flex;
+    animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado{
+        transform: rotate(-45deg) translate(-10px, 8px);
+}
+.br-2.animado{
+    opacity: 0;
+}
+
+.br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+}
+
+@keyframes ocultaMenu{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+.enlaces-menu.desactivado{
+    display: none;
+    animation: ocultaMenu 350ms ease-in-out both;
+}
+
+.br-1.animado{
+        transform: rotate(-45deg) translate(-10px, 8px);
+}
+.br-2.animado{
+    opacity: 0;
+}
+
+.br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+}
